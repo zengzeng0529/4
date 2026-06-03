@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>濟州島生日遊 ｜ Jeju Travel Companion</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF9E7D;
+            --secondary: #6BBF59;
+            --bg-creme: #FFFDF9;
+            --stone-gray: #4A4A4A;
+        }
+        body {
+            font-family: 'Noto Sans TC', 'Comfortaa', 'Twinkle Star', cursive, sans-serif;
+            background-color: #EBF4F6;
+            color: #333;
+            -webkit-tap-highlight-color: transparent;
+            overflow-x: hidden;
+        }
+        /* 手機 App 容器模擬器（置中、鎖定最大寬度） */
+        .app-container {
+            max-width: 480px;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-color: var(--bg-creme);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 95px; /* 為底部浮動導覽列預留空間 */
+        }
+        /* 日式圓角卡片 */
+        .rounded-card {
+            border-radius: 24px;
+            border: 2px solid #F3EDE2;
+            background: #FFFFFF;
+            box-shadow: 0 8px 16px rgba(255, 158, 125, 0.05);
+        }
+        /* 真首 Banner 容器 */
+        .header-banner {
+            height: 250px;
+            background-image: url('IMG_2980.png'); /
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        /* 漸層遮罩，確保文字與按鈕清晰 */
+        .banner-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+        }
+        /* 隱藏滾動條但保持滾動功能 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* 購物清單/分帳已完成的劃線與反黑樣式 */
+        .line-through-done {
+            text-decoration: line-through;
+            opacity: 0.45;
+            background-color: #f3f4f6 !important;
+            filter: grayscale(100%);
+        }
+        /* 右下角浮動新增按鈕 (FAB) */
+        .fab {
+            position: fixed;
+            bottom: 115px;
+            right: calc(50% -
